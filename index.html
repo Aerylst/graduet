@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduation Photobox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="flash-overlay" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="experience" data-layer="0">
+    <header class="experience-bar">
+      <p class="brand-mark">Graduation Photobox</p>
+      <p class="brand-subline">Three layers for one huge milestone</p>
+    </header>
+
+    <div class="layer-dots" aria-label="Layer navigation">
+      <button class="dot is-active" type="button" data-target="0" aria-label="Buka layer 1"></button>
+      <button class="dot" type="button" data-target="1" aria-label="Buka layer 2"></button>
+      <button class="dot" type="button" data-target="2" aria-label="Buka layer 3"></button>
+    </div>
+
+    <div class="stack">
+      <section class="layer layer--intro is-active" id="layer-0">
+        <div class="layer-copy">
+          <p class="eyebrow">Class of <span data-year></span> / photobox session</p>
+          <h1>Selamat, <span data-recipient></span>.<br>Hari ini giliranmu bersinar.</h1>
+          <p class="lede">
+            Semua panik, begadang, dan lelah itu akhirnya punya panggung sendiri.
+            Sekarang waktunya abadikan versi paling bangga dari dirimu.
+          </p>
+
+          <div class="actions">
+            <button class="action action--primary" type="button" data-next>Buka Booth</button>
+            <button class="action action--ghost" type="button" data-target="1">Lihat Photostrip</button>
+          </div>
+
+          <div class="ticker" aria-hidden="true">
+            <span>caps tossed</span>
+            <span>flash on</span>
+            <span>future loading</span>
+          </div>
+        </div>
+
+        <div class="hero-booth" aria-hidden="true">
+          <div class="lamp lamp--left"></div>
+          <div class="lamp lamp--right"></div>
+          <div class="booth-card">
+            <div class="booth-top">
+              <p>Booth No. 03</p>
+              <span>ready to print</span>
+            </div>
+
+            <div class="booth-screen">
+              <div class="screen-badge">3 SHOTS</div>
+              <p class="screen-small">The spotlight looks good on you</p>
+              <h2>GRAD MODE</h2>
+              <div class="countdown">
+                <span>3</span>
+                <span>2</span>
+                <span>1</span>
+              </div>
+            </div>
+
+            <div class="mini-strip">
+              <div class="mini-photo mini-photo--one"></div>
+              <div class="mini-photo mini-photo--two"></div>
+              <div class="mini-photo mini-photo--three"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layer layer--strip" id="layer-1" aria-hidden="true">
+        <div class="strip-copy">
+          <p class="eyebrow">Layer 02 / captured in three beats</p>
+          <h2>Tiga frame untuk satu momen besar.</h2>
+          <p class="lede">
+            Tiap layer menyimpan rasa yang beda: deg-degan, lega, lalu bangga.
+            Klik frame favoritmu atau biarkan strip ini berputar sendiri.
+          </p>
+
+          <div class="story-panel" aria-live="polite">
+            <p class="story-label" data-shot-label></p>
+            <h3 data-shot-title></h3>
+            <p class="story-text" data-shot-text></p>
+            <div class="story-tags">
+              <span data-shot-tag-a></span>
+              <span data-shot-tag-b></span>
+              <span data-shot-tag-c></span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="action action--ghost" type="button" data-target="0">Kembali</button>
+            <button class="action action--primary" type="button" data-next>Lanjut Ucapan</button>
+          </div>
+        </div>
+
+        <div class="photostrip" role="tablist" aria-label="Graduation moments">
+          <button class="shot shot--1 is-selected" type="button" role="tab" aria-selected="true" data-shot="0">
+            <span class="shot-visual"></span>
+            <span class="shot-meta">
+              <strong>Frame 01</strong>
+              <span>before the call</span>
+            </span>
+          </button>
+
+          <button class="shot shot--2" type="button" role="tab" aria-selected="false" data-shot="1">
+            <span class="shot-visual"></span>
+            <span class="shot-meta">
+              <strong>Frame 02</strong>
+              <span>right on stage</span>
+            </span>
+          </button>
+
+          <button class="shot shot--3" type="button" role="tab" aria-selected="false" data-shot="2">
+            <span class="shot-visual"></span>
+            <span class="shot-meta">
+              <strong>Frame 03</strong>
+              <span>the afterglow</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="layer layer--message" id="layer-2" aria-hidden="true">
+        <div class="message-card">
+          <p class="eyebrow">Final print / keep this one forever</p>
+          <h2>Untuk <span data-recipient></span>,<br>selamat lulus.</h2>
+
+          <div class="message-lines">
+            <p data-line="0"></p>
+            <p data-line="1"></p>
+            <p data-line="2"></p>
+          </div>
+
+          <div class="signature-block">
+            <span>With so much pride,</span>
+            <strong data-sender></strong>
+          </div>
+
+          <div class="actions">
+            <button class="action action--ghost" type="button" data-target="1">Balik ke Strip</button>
+            <button class="action action--primary" type="button" data-target="0">Putar Lagi</button>
+          </div>
+        </div>
+
+        <aside class="memory-ribbon" aria-hidden="true">
+          <div class="memory-chip">all the late nights paid off</div>
+          <div class="memory-chip">your name belongs here</div>
+          <div class="memory-chip">smile, this chapter is yours</div>
+          <div class="memory-chip">printed on the brightest paper</div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
